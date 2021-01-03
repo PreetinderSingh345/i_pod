@@ -1,6 +1,28 @@
+/* body */
+
 body {
 
   margin: 0;
   font-family: sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;  
+  height: 100vh;
+  background-color: whitesmoke;
+
+}
+
+/* ipod */
+
+#ipod{
+
+  height: 90vh;
+  width: 30vw;
+  min-height: 500px;
+  min-width: 300px;  
+  background-color: rgb(223, 223, 223);  
+  border-radius: 30px;
+  border: 2px outset grey;
 
 }
