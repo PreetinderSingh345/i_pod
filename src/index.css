@@ -9,7 +9,7 @@ body {
   justify-content: center;
   align-items: center;  
   height: 100vh;
-  background-color: whitesmoke;
+  background-image: linear-gradient(to top right, grey, whitesmoke, grey);
 
 }
 

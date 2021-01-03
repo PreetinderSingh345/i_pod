@@ -9,7 +9,8 @@ class Screen extends React.Component{
     render(){
         return (
 
-            <div id="screen">            
+            <div id="screen">        
+                <div id="options-container"></div>    
             </div>
 
         );
