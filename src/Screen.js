@@ -1,20 +1,26 @@
-// importing react
+// importing Options component
 
-import React from "react";
+import Options from "./Options";
 
-// defining and exporting the Screen class
+// defining and exporting the Screen function
 
-class Screen extends React.Component{
+const Screen=(props)=>{
+    
+    return (
+        <div id="screen">
 
-    render(){
-        return (
+            {props.showList && 
+                <Options
+                    highlightedValue={props.highlightedValue}
+                />
+            }   
 
-            <div id="screen">        
-                <div id="options-container"></div>    
-            </div>
+            {props.showOption &&
+                props.selectedOption
+            }
 
-        );
-    }
+        </div>
+    );    
 
 }
 
