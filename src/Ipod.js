@@ -46,14 +46,18 @@ class Ipod extends React.Component{
 
         // returning if the movement is inside the menu center button
 
-        if(element==centerElement){
+        if(element===centerElement){
             return ;
         }
 
-        // removing the highlighted background color of the previously selected value
+        // removing the styling of the previously highlighted value
 
         let prevValue=document.getElementById(this.state.highlightedValue);
         prevValue.style.backgroundColor="whitesmoke";                
+        prevValue.style.boxShadow="none";
+        
+        let prevArrow=document.querySelector(`#${this.state.highlightedValue} .arrow-icon`);
+        prevArrow.style.display="none";
 
         // getting the center coordinates of menu center button and rounding them
 
@@ -89,13 +93,13 @@ class Ipod extends React.Component{
 
         let selectedOption=null;
 
-        if(angleDeg==1){
+        if(angleDeg===1){
             selectedOption=<CoverFlow/>;
         }
-        else if(angleDeg==2){
+        else if(angleDeg===2){
             selectedOption=<Music/>;
         }
-        else if(angleDeg==3){
+        else if(angleDeg===3){
             selectedOption=<Games/>;
         }
         else{
@@ -111,10 +115,14 @@ class Ipod extends React.Component{
 
         }, ()=>{
 
-            // setting the highlighted background color of the newly selected value
+            // setting the styling of the newly highlighted value
 
             let newValue=document.getElementById(this.state.highlightedValue);
             newValue.style.backgroundColor="lightskyblue";
+            newValue.style.boxShadow="0 0 2px 2px inset rgb(93, 196, 236)";
+
+            let newArrow=document.querySelector(`#${this.state.highlightedValue} .arrow-icon`);
+            newArrow.style.display="inline-block";
 
         });        
 
@@ -128,9 +136,9 @@ class Ipod extends React.Component{
 
         let menuButton=document.getElementById("menu-content");        
         
-        if(event.target==menuButton){
+        if(event.target===menuButton){
             return ;
-        }
+        }        
 
         // setting the state, to hide the list and show the option
 
@@ -140,6 +148,42 @@ class Ipod extends React.Component{
             showOption: true
 
         });
+
+    }
+
+    // center down function to handle the event when the menu center button is pressed down
+
+    centerDown=(event)=>{
+
+        // if the menu content is clicked, then we return, as we're not present inside the menu center button's circle
+
+        let menuButton=document.getElementById("menu-content");        
+        
+        if(event.target===menuButton){
+            return ;
+        }    
+
+        // adding shadow style
+
+        event.target.style.boxShadow="0 0 4px 4px inset grey";
+
+    }
+
+    // center up function to handle the event when the menu center button is released
+
+    centerUp=(event)=>{
+
+        // if the menu content is clicked, then we return, as we're not present inside the menu center button's circle
+
+        let menuButton=document.getElementById("menu-content");        
+        
+        if(event.target===menuButton){
+            return ;
+        }    
+
+        // removing shadow style
+
+        event.target.setAttribute("style", "none");
 
     }
 
@@ -179,6 +223,8 @@ class Ipod extends React.Component{
                     menuMove={this.menuMove}
                     centerClicked={this.centerClicked}
                     menuClicked={this.menuClicked}
+                    centerDown={this.centerDown}
+                    centerUp={this.centerUp}
 
                 />
 

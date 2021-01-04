@@ -9,7 +9,9 @@ body {
   justify-content: center;
   align-items: center;  
   height: 100vh;
-  background-image: linear-gradient(to top right, grey, whitesmoke, grey);
+  background-image: linear-gradient(to top right, white, lightgrey, white);
+  min-width: 300px;  
+  min-height: 550px;
 
 }
 
@@ -19,16 +21,18 @@ body {
 
   height: 500px;
   width: 25vw;  
-  min-width: 270px;  
-  background-color: rgb(223, 223, 223);  
+  min-width: 270px; 
+  min-height: 500px;
   border-radius: 30px;
   border: 2px outset grey;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 5px;
-
+  padding: 10px 5px;  
+  background-image: linear-gradient(to top right, whitesmoke, grey, whitesmoke);
+  box-shadow: 0 0 4px 4px grey;
+  
 }
 
 /* screen */
@@ -38,8 +42,8 @@ body {
   height: 270px;
   width: 100%;  
   border-radius: 20px;
-  border: 2px outset grey;
-  background-image: linear-gradient(to top, lightcyan, skyblue);
+  border: 2px outset lightgrey;
+  background-image: linear-gradient(to top, lightcyan, skyblue);  
 
 }
 
@@ -47,16 +51,27 @@ body {
 
 #options-container{
   
-  border-radius: 20px;
+  border-radius: 17px;
   width: 60%;
   height: 100%;
-  background-color: rgb(221, 221, 221);  
+  background-color: rgb(199, 199, 199);  
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;  
   align-items: center;  
   padding: 5px;
   box-sizing: border-box;
+  box-shadow: 0 0 2px 2px inset grey;
+
+}
+
+/* ipod heading */
+
+#ipod-heading{
+
+  font-size: 1.2rem;
+  color: rgb(77, 90, 102);
+  letter-spacing: 1.5px;
 
 }
 
@@ -75,14 +90,21 @@ body {
   font-weight: bold;
   margin: 5px;
   border-radius: 10px;
-  transition: background-color 0.01s ease-in-out;
+  position: relative;
   
 }
 
 /* option 1 */
 
 #option1{
+
   background-color: lightskyblue;
+  box-shadow: 0 0 2px 2px inset rgb(93, 196, 236);
+
+}
+
+#option1 .arrow-icon{
+  display: inline-block;
 }
 
 /* selected option */
@@ -91,7 +113,7 @@ body {
 
   height: 100%;
   width: 100%;  
-  border-radius: 20px;  
+  border-radius: 17px;  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -100,6 +122,18 @@ body {
   font-weight: bold;
   color: darkslategrey;
   background-image: radial-gradient(lightcyan, lightskyblue);
+
+}
+
+/* arrow icon */
+
+.arrow-icon{
+
+  position: absolute;
+  right: 0;
+  margin: 5px;
+  display: none;
+
 }
 
 /* option icon */
@@ -123,6 +157,8 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 0 2px 2px inset grey;
+  cursor: pointer;
 
 }
 
@@ -135,6 +171,7 @@ body {
   border-radius: 50%;
   background-color: rgb(201, 201, 201);
   position: relative;
+  box-shadow: 0 0 2px 2px grey;
 
 }
 
@@ -144,8 +181,13 @@ body {
 
   position: absolute;
   font-size: 1.5rem;
-  color: grey;
+  color: grey;  
+  transition: color 0.3s ease-in-out;
 
+}
+
+.menu-icon:hover{
+  color: darkslategrey;
 }
 
 /* menu content */
@@ -157,7 +199,12 @@ body {
   left: 16.735px;
   top: -38.5px;
   color: rgb(100, 100, 100);
+  transition: color 0.3s ease-in-out;  
 
+}
+
+#menu-content:hover{
+  color: darkslategrey;
 }
 
 /* backward icon */
@@ -184,7 +231,6 @@ body {
 
   bottom: -38px;
   left: 22.5px;
-  color: rgb(100, 100, 100);
 
 }
 
@@ -194,6 +240,26 @@ body {
 
   bottom: -38px;
   right: 22.5px;
-  color: rgb(100, 100, 100);
 
+}
+
+/* scrollbar */
+
+::-webkit-scrollbar{
+
+  height: 8px;
+  width: 8px;
+
+}
+
+::-webkit-scrollbar-track{
+  background-color: lightgrey;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: slategray;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: grey;
 }

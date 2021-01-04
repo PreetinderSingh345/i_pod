@@ -1,3 +1,8 @@
+// importing fontawesome icons
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+
 // defining and exporting the Options function
 
 const Options=(props)=>{
@@ -8,10 +13,37 @@ const Options=(props)=>{
             value={props.highlightedValue}
         >
 
-            <div className="option" id="option1">Cover flow</div>
-            <div className="option" id="option2">Music</div>
-            <div className="option" id="option3">Games</div>
-            <div className="option" id="option4">Settings</div>
+            <div id="ipod-heading">
+                <span>Ipod.js</span>                
+            </div>
+
+            <div className="option" id="option1">
+
+                <span>Cover flow</span> 
+                <FontAwesomeIcon icon={faAngleRight} className="arrow-icon"/>
+                
+            </div>
+
+            <div className="option" id="option2">
+
+                <span>Music</span> 
+                <FontAwesomeIcon icon={faAngleRight} className="arrow-icon"/>
+
+            </div>
+
+            <div className="option" id="option3">
+
+                <span>Games</span> 
+                <FontAwesomeIcon icon={faAngleRight} className="arrow-icon"/>  
+
+            </div>
+
+            <div className="option" id="option4">
+
+                <span>Settings</span> 
+                <FontAwesomeIcon icon={faAngleRight} className="arrow-icon"/>  
+
+            </div>
 
         </div>
 

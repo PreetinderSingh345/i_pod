@@ -9,12 +9,12 @@ const Menu=(props)=>{
 
     // getting the needed functions from props
 
-    const {menuMove, centerClicked, menuClicked}=props;
+    const {menuMove, centerClicked, menuClicked, centerDown, centerUp}=props;
 
     return(
 
         <div id="menu" onMouseMove={(event)=>menuMove(event)}>
-            <div id="menu-center-button" onClick={(event)=>centerClicked(event)}>
+            <div id="menu-center-button" onClick={(event)=>centerClicked(event)} onMouseDown={(event)=>centerDown(event)} onMouseUp={(event)=>centerUp(event)}>
 
                 <div id="menu-content" className="menu-icon" onClick={menuClicked}>menu</div>
                 <FontAwesomeIcon icon={faBackward} className="menu-icon" id="backward"/>
