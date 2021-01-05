@@ -1,5 +1,6 @@
-// importing Options component
+// importing Options and MusicOptions component
 
+import MusicOptions from "./MusicOptions";
 import Options from "./Options";
 
 // defining and exporting the Screen function
@@ -14,6 +15,12 @@ const Screen=(props)=>{
                     highlightedValue={props.highlightedValue}
                 />
             }   
+
+            {props.showMusicList &&
+                <MusicOptions
+                    highlightedValue={props.highlightedValue}
+                />
+            }            
 
             {props.showOption &&
                 props.selectedOption

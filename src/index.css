@@ -49,7 +49,7 @@ body {
 
 /* options container */
 
-#options-container{
+.options-container{
   
   border-radius: 17px;
   width: 60%;

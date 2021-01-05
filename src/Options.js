@@ -9,7 +9,7 @@ const Options=(props)=>{
     
     return (
 
-        <div id="options-container"
+        <div className="options-container"
             value={props.highlightedValue}
         >
 
