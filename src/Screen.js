@@ -1,6 +1,6 @@
 // importing Options and MusicOptions component
 
-import MusicOptions from "./MusicOptions";
+import MusicOptions from "./Music_Options/MusicOptions";
 import Options from "./Options";
 
 // defining and exporting the Screen function

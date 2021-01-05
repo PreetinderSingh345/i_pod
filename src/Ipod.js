@@ -3,13 +3,13 @@
 import React from "react";
 import Screen from "./Screen";
 import Menu from "./Menu";
-import CoverFlow from "./CoverFlow";
-import Games from "./Games";
-import MusicOptions from "./MusicOptions";
-import Settings from "./Settings";
-import AllSongs from "./AllSongs";
-import Albums from "./Albums";
-import Artists from "./Artists";
+import CoverFlow from "./Main_Options/CoverFlow";
+import Games from "./Main_Options/Games";
+import MusicOptions from "./Music_Options/MusicOptions";
+import Settings from "./Main_Options/Settings";
+import AllSongs from "./Music_Options/AllSongs";
+import Albums from "./Music_Options/Albums";
+import Artists from "./Music_Options/Artists";
 
 // defining and exporting the Ipod class
 
