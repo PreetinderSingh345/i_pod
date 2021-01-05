@@ -77,6 +77,7 @@ class Ipod extends React.Component{
         let prevValue=document.getElementById(this.state.highlightedValue);
         prevValue.style.backgroundColor="whitesmoke";                
         prevValue.style.boxShadow="none";
+        prevValue.style.color="darkslategrey";
         
         let prevArrow=document.querySelector(`#${this.state.highlightedValue} .arrow-icon`);
         prevArrow.style.display="none";
@@ -154,6 +155,7 @@ class Ipod extends React.Component{
             let newValue=document.getElementById(this.state.highlightedValue);
             newValue.style.backgroundColor="lightskyblue";
             newValue.style.boxShadow="0 0 2px 2px inset rgb(93, 196, 236)";
+            newValue.style.color="whitesmoke";
 
             let newArrow=document.querySelector(`#${this.state.highlightedValue} .arrow-icon`);
             newArrow.style.display="inline-block";
@@ -197,6 +199,7 @@ class Ipod extends React.Component{
                 let newValue=document.getElementById(this.state.highlightedValue);
                 newValue.style.backgroundColor="lightskyblue";
                 newValue.style.boxShadow="0 0 2px 2px inset rgb(93, 196, 236)";
+                newValue.style.color="whitesmoke";
 
                 let newArrow=document.querySelector(`#${this.state.highlightedValue} .arrow-icon`);
                 newArrow.style.display="inline-block";
@@ -302,6 +305,7 @@ class Ipod extends React.Component{
                 let newValue=document.getElementById(this.state.highlightedValue);
                 newValue.style.backgroundColor="lightskyblue";
                 newValue.style.boxShadow="0 0 2px 2px inset rgb(93, 196, 236)";
+                newValue.style.color="whitesmoke";
 
                 let newArrow=document.querySelector(`#${this.state.highlightedValue} .arrow-icon`);
                 newArrow.style.display="inline-block";                
